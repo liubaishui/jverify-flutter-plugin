@@ -5,11 +5,10 @@ buildscript {
     repositories {
         mavenCentral()
         google()
-        jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.2'
+        classpath 'com.android.tools.build:gradle:7.2.2'
     }
 }
 
@@ -17,7 +16,6 @@ rootProject.allprojects {
     repositories {
         mavenCentral()
         google()
-        jcenter()
     }
 }
 
@@ -37,13 +35,13 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            useProguard true
+            // useProguard true
             // library 混淆 -> 随 library 引用，自动添加到 apk 打包混淆
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'consumer-rules.pro'
         }
         debug {
             minifyEnabled false
-            useProguard false
+            // useProguard false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'consumer-rules.pro'
         }
     }
