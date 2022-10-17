@@ -573,6 +573,7 @@ class JVUIConfig {
   bool statusBarTransparent = false; //授权页栏状态栏是否透明 only android
   bool statusBarHidden = false; //授权页状态栏是否隐藏 only android
   bool virtualButtonTransparent = false; //授权页虚拟按键背景是否透明 only android
+  bool virtualButtonHidden = false; //底部虚拟按键是否隐藏 only android
 
   JVIOSBarStyle authStatusBarStyle =
       JVIOSBarStyle.StatusBarStyleDefault; //授权页状态栏样式设置 only iOS
@@ -688,6 +689,7 @@ class JVUIConfig {
       "statusBarTransparent": statusBarTransparent,
       "statusBarHidden": statusBarHidden,
       "virtualButtonTransparent": virtualButtonTransparent,
+      "virtualButtonHidden": virtualButtonHidden,
       "authStatusBarStyle": getStringFromEnum(authStatusBarStyle),
       "privacyStatusBarStyle": getStringFromEnum(privacyStatusBarStyle),
       "modelTransitionStyle": getStringFromEnum(modelTransitionStyle),
