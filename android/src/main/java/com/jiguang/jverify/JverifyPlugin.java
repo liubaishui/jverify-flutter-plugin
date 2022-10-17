@@ -613,6 +613,7 @@ public class JverifyPlugin implements FlutterPlugin, MethodCallHandler {
         Object statusBarTransparent = valueForKey(uiconfig, "statusBarTransparent");
         Object statusBarHidden = valueForKey(uiconfig, "statusBarHidden");
         Object virtualButtonTransparent = valueForKey(uiconfig, "virtualButtonTransparent");
+        Object virtualButtonHidden = valueForKey(uiconfig, "virtualButtonHidden");
 
         Object privacyStatusBarColorWithNav = valueForKey(uiconfig, "privacyStatusBarColorWithNav");
         Object privacyStatusBarDarkMode = valueForKey(uiconfig, "privacyStatusBarDarkMode");
@@ -648,6 +649,10 @@ public class JverifyPlugin implements FlutterPlugin, MethodCallHandler {
 
         if (virtualButtonTransparent != null) {
             builder.setVirtualButtonTransparent((Boolean) virtualButtonTransparent);
+        }
+        
+        if (virtualButtonHidden != null) {
+            builder.setVirtualButtonHidden((Boolean) virtualButtonHidden);
         }
 
         /************** web页 ***************/
