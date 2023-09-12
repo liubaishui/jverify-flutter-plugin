@@ -341,7 +341,7 @@ class _MyAppState extends State<MyApp> {
         uiConfig.privacyHintToast =
             true; //only android 设置隐私条款不选中时点击登录按钮默认显示toast。
 
-        uiConfig.privacyState = true; //设置默认勾选
+        uiConfig.privacyState = false; //设置默认勾选
         uiConfig.privacyCheckboxSize = 20;
         uiConfig.checkedImgPath = "check_image"; //图片必须存在
         uiConfig.uncheckedImgPath = "uncheck_image"; //图片必须存在
@@ -394,12 +394,41 @@ class _MyAppState extends State<MyApp> {
         uiConfig.privacyNavTitleTitle = "ios lai le"; //only ios
         uiConfig.privacyNavReturnBtnImage = "back"; //图片必须存在;
 
+        //协议二次弹窗内容设置 -iOS
+        uiConfig.agreementAlertViewTitleTexSize = 18;
+        uiConfig.agreementAlertViewTitleTextColor = Colors.red.value;
+        uiConfig.agreementAlertViewContentTextAlignment =
+            JVTextAlignmentType.center;
+        uiConfig.agreementAlertViewContentTextFontSize = 16;
+        uiConfig.agreementAlertViewLoginBtnNormalImagePath = "login_btn_normal";
+        uiConfig.agreementAlertViewLoginBtnPressedImagePath = "login_btn_press";
+        uiConfig.agreementAlertViewLoginBtnUnableImagePath = "login_btn_unable";
+        uiConfig.agreementAlertViewLogBtnTextColor = Colors.black.value;
+
+        //协议二次弹窗内容设置 -Android
+        JVPrivacyCheckDialogConfig privacyCheckDialogConfig =
+            JVPrivacyCheckDialogConfig();
+        // privacyCheckDialogConfig.width = 250;
+        // privacyCheckDialogConfig.height = 100;
+        privacyCheckDialogConfig.offsetX = 0;
+        privacyCheckDialogConfig.offsetY = 0;
+        privacyCheckDialogConfig.titleTextSize = 22;
+        privacyCheckDialogConfig.gravity = "center";
+        privacyCheckDialogConfig.titleTextColor = Colors.black.value;
+        privacyCheckDialogConfig.contentTextGravity = "left";
+        privacyCheckDialogConfig.contentTextSize = 14;
+        privacyCheckDialogConfig.logBtnImgPath = "login_btn_normal";
+        privacyCheckDialogConfig.logBtnTextColor = Colors.black.value;
+        uiConfig.privacyCheckDialogConfig = privacyCheckDialogConfig;
+
+        uiConfig.setIsPrivacyViewDarkMode = false;//协议页面是否支持暗黑模式
+
         //弹框模式
-//         JVPopViewConfig popViewConfig = JVPopViewConfig();
-//         popViewConfig.width = (screenWidth - 100.0).toInt();
-//         popViewConfig.height = (screenHeight - 150.0).toInt();
-//
-//         uiConfig.popViewConfig = popViewConfig;
+        // JVPopViewConfig popViewConfig = JVPopViewConfig();
+        // popViewConfig.width = (screenWidth - 100.0).toInt();
+        // popViewConfig.height = (screenHeight - 150.0).toInt();
+
+        // uiConfig.popViewConfig = popViewConfig;
 
         /// 添加自定义的 控件 到授权界面
         List<JVCustomWidget> widgetList = [];
@@ -475,6 +504,7 @@ class _MyAppState extends State<MyApp> {
           _result = "[2016],msg = 当前网络环境不支持认证";
         });
 
+
         /* 弹框模式
         JVPopViewConfig popViewConfig = JVPopViewConfig();
         popViewConfig.width = (screenWidth - 100.0).toInt();
@@ -516,7 +546,7 @@ class _MyAppState extends State<MyApp> {
 
     jverify.setDebugMode(true); // 打开调试模式
     jverify.setup(
-        appKey: "59705dfaf33d8f339047b670", //"你自己应用的 AppKey",
+        appKey: "4fcc3e237eec4c4fb804ad49", //"你自己应用的 AppKey",
         channel: "devloper-default"); // 初始化sdk,  appKey 和 channel 只对ios设置有效
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling

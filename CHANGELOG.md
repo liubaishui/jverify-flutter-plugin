@@ -1,3 +1,17 @@
+## 2.3.5
++ 优化： fix
+## 2.3.4
++ 优化： 增加setIsPrivacyViewDarkMode参数，协议页面是否支持暗黑模式
+## 2.3.3
++ 优化： 修复Android的回调参数个数问题 修复setLogBtnBottomOffsetY不生效问题
+## 2.3.2
++ 优化： 升级原生SDK iOS：3.1.2 android:3.1.1
+## 2.3.1
++ 优化： 优化iOS代码，解决UI问题
+## 2.3.0
++ 优化： Android/ios更新到极光原生SDK3.0.1
+## 2.2.9
++ 优化： Android更新到2.9.7
 ## 2.2.7
 + 优化： iOS更新到2.9.3
 ## 2.2.6
